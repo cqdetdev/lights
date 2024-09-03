@@ -7,6 +7,7 @@ const (
 	CHARACTERISTIC_WRITE_UUID  = "0000afd1-0000-1000-8000-00805f9b34fb"
 	CHARACTERISTIC_NOTIFY_UUID = "0000afd2-0000-1000-8000-00805f9b34fb"
 
+	// TODO: Add the other commands for other custom behaviors
 	LIGHTS_ON_STRING  = "\x5B\xF0\x00\xB5"
 	LIGHTS_OFF_STRING = "\x5B\x0F\x00\xB5"
 )
