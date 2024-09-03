@@ -11,6 +11,9 @@ import (
 // Can be updated, this is set to around my monitor which is 240hz.
 const UPDATE_INTERVAL = 15 * time.Millisecond
 
+// Should be different for everybody, configure this accordingly.
+const DEVICE_NAME = "KS03~8a0035"
+
 func main() {
 	adapter := bluetooth.DefaultAdapter
 	err := adapter.Enable()
@@ -22,7 +25,7 @@ func main() {
 	var addr bluetooth.Address
 	adapter.Scan(func(adapter *bluetooth.Adapter, device bluetooth.ScanResult) {
 		// Specific to me, could me different for other users.
-		if device.LocalName() == "KS03~8a0035" {
+		if device.LocalName() == DEVICE_NAME {
 			addr = device.Address
 			adapter.StopScan()
 		}
